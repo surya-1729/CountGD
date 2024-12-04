@@ -1,0 +1,10 @@
+env/ 
+data/
+checkpoints/
+datasets/
+datasets_inference/
+models/
+groundingdino/
+models_inference/
+util/
+__pycache__
