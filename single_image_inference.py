@@ -35,9 +35,8 @@ def build_model_and_transform(args):
         normalize,
     ])
     
-    # Create a wrapper function that only takes image as input
     def transform_image(image):
-        return transform(image, None)[0]  # Add None as target and return only image
+        return transform(image, None)[0]
 
     
     cfg = SLConfig.fromfile("/home/alla/CountGD/config/cfg_fsc147_test.py")
@@ -100,8 +99,8 @@ def visualize_results(image, boxes):
     plt.axis('off')
     
     plt.tight_layout()
-    plt.savefig('detection_results.png')  # Save figure instead of showing it
-    plt.close()  # Close the figure to free memory
+    plt.savefig('detection_results.png')
+    plt.close()
 
 
 if __name__ == "__main__":
